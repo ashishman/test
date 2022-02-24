@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #4cab8b;
+    height: 70px;
+    width: 100%;
+}
+.containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+}
+.container{
+    border: 1px solid #545454;
+    border-radius: 10px;
+    height: 450px;
+    width: 40vw;
+}
+.otp-header{
+    border-bottom: 1px solid #545454;
+    height: 70px;
+}
+.otp-header-text{
+    color: #4cab8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+.otp-main-body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(50vh - 70px);
+}
+.request-header{
+    margin: 50px 0px 18px 0px;
+    font-size: 20px;
+}
+.info-header{
+    margin-bottom: 18px;
+}
+.otp-input{
+    height: 35px;
+    width: 30px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.btn{
+    margin: 20px;
+    background-color: blue;
+    color: #ffff;
+    height: 30px;
+    width: 70px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+
+}
+.resend-otp a{
+    text-decoration: none;
+}
+.otp-timer{
+    margin: 20px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .container{
+        width: 70vw;
+    }
+  }
+
+  @media only screen and (max-width: 630px) {
+    .container{
+        width: 90vw;
+    }
+  }
