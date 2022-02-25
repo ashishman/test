@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRM - OTP</title>
+</head>
+<body>
+    <!-- header section -->
+    <header>
+
+    </header>
+    <!-- end of header section -->
+
+    <!-- main section -->
+    <div class="containers">
+        <div class="container">
+            <div class="otp-header">
+                <h1 class="otp-header-text">OTP Validation</h1>
+            </div>
+            <div class="otp-main-body">
+                <h4 class="request-header">Please enter the OTP to verify Login credentials</h4>
+                <p class="info-header">A One-time password has been sent to your email</p>
+                <div class="input-otp-container">
+                    <input type="text" maxlength="1" id="text1" class="otp-input" autofocus onkeyup="mover(event, '','text1', 'text2')">
+                    <input type="text" maxlength="1" id="text2" class="otp-input" onkeyup="mover(event, 'text1','text2', 'text3')">
+                    <input type="text" maxlength="1" id="text3" class="otp-input" onkeyup="mover(event, 'text2','text3', 'text4')">
+                    <input type="text" maxlength="1" id="text4" class="otp-input" onkeyup="mover(event, 'text3','text4', 'text5')">
+                    <input type="text" maxlength="1" id="text5" class="otp-input" onkeyup="mover(event, 'text4','text5', 'text6')">
+                    <input type="text" maxlength="1" id="text6" class="otp-input" onkeyup="mover(event, 'text5','text6', '')">
+                </div>
+                <button class="btn">Verify</button>
+                <p class="resend-otp">Didn't get code? <a href="#">Resend Code</a> </p>
+                <p class="otp-timer">Please try again after 15 sec, if you did not receive OTP</p>
+            </div>
+        </div>
+    </div>
+    <!-- end of main section -->
+
+    <script>
+        function mover(e, pre, cur, nxt){
+            var length = document.getElementById(cur).value.length;
+            if (length == 1){
+                if(nxt !== ''){
+                document.getElementById(nxt).focus();
+                }
+            }
+            if(e.key == 'Backspace'){
+                if(pre !== ''){
+                document.getElementById(pre).focus();
+                }
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
